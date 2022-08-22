@@ -1,0 +1,23 @@
+* {
+  font-family: "Roboto", sans-serif;
+  font-family: "Shrikhand", cursive;
+}
+
+.titre {
+  text-align: center;
+  width: 100%;
+  font-size: 160%;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+}
+
+.text_location {
+  text-align: center;
+}
+
+/*# sourceMappingURL=page_accueil-style.css.map */
