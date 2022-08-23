@@ -1,19 +1,136 @@
+$main_font: 'Roboto', sans-serif;
+$title_font:'Shrikhand', cursive;
+$very_strong_grey:#434343;
+$strong_grey:#aaa9a9;
+$grey:#E3E3E3;
+$light_grey:#F3F3F3;
+$purple:#9656DC;
+$pink:#FF79DA;
+$green:#99E2D0;
+
+
 *{
-font-family: 'Roboto', sans-serif;
-font-family: 'Shrikhand', cursive;
+font-family: $title_font;    
+font-family:$main_font;
 }
 
-.titre{
+body{
+    margin:0;
+}
+p{
+    margin:0;
+}
+.ohmyfood{
     text-align: center ;
     width:100%;
     font-size: 160%;
+    margin:10px 0 10px 0;
 }
-.location{
-    display:flex;
-    flex-direction:row;
-    text-align: center;
+.main_title{
+    font-family: $title_font;
+}
+.dégradé{
+    background: linear-gradient($strong_grey,10%, $grey);
+    height:5px;
     width:100%;
 }
-.text_location{
+.location{
+    display:flex;  
+    justify-content: center;
+    width:100%;
+    background-color: $grey;
+    color:$very_strong_grey;
+}
+.fa-map-marker-alt{
+    align-content: center;
+    padding:10px 10px 0 0;
+}
+.location_text{
+    font-family: $main_font;
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+}
+.reservation{
+    display:flex;
+    flex-direction: column;
+    background-color: $light_grey;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 250px;
+}
+.reservez{
+    width:75%;
+    font-weight: 1000;
     text-align: center;
+    font-size: 22px;
+}
+.decouvrez{
+    text-align: center;
+    width:80%;
+    
+}
+.purple_button{
+    background: $purple;
+    background: linear-gradient(344deg, $purple 0%, $pink 100%);
+    padding: 15px;
+    border-radius: 30px;
+    color: $light_grey;
+    font-weight: 400;
+    border:none;
+    line-height: 1;
+    letter-spacing: 0px;
+    box-shadow: 3px 3px 10px 0 $strong_grey;
+
+}
+.purple_button:hover{
+    background: linear-gradient(344deg, $pink 0%, $purple 100%);
+}
+.fonctionnement{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+.titre{
+    font-weight: 700;
+    font-size: 22px;
+    padding: 40px 0 30px 20px;
+}
+
+.fonct{
+    display: flex;
+    flex-direction: row;
+    width:70%;
+    background-color: $light_grey;
+    padding: 30px 20px 20px 22px;
+    margin:0px 2% 5% 7%;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px 0 $strong_grey;
+    font-weight:bold;
+        &.fonct__purple{
+            background-color: #EBE2F5;
+        }
+}
+.purple_circle{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $purple;
+    color:white;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position:relative;
+    bottom:5px;
+    right:40px;
+}
+.logo{
+    position:relative;
+    right: 20px;
+    bottom: 5px;
+    font-size: 25px;
+    color:$very_strong_grey;
+        &.logo__purple{
+            color:$purple;
+        }
+    
 }
