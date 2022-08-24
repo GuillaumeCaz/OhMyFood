@@ -18,6 +18,11 @@ p {
   font-size: 160%;
   margin: 10px 0 10px 0;
 }
+.ohmyfood__footer {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  padding-top: 20px;
+}
 
 .main_title {
   font-family: "Shrikhand", cursive;
@@ -104,7 +109,7 @@ p {
   width: 70%;
   background-color: #F3F3F3;
   padding: 30px 20px 20px 22px;
-  margin: 0px 2% 5% 7%;
+  margin: 0px 2% 5% 10%;
   border-radius: 20px;
   box-shadow: 3px 3px 10px 0 #aaa9a9;
   font-weight: bold;
@@ -131,11 +136,100 @@ p {
   position: relative;
   right: 20px;
   bottom: 5px;
-  font-size: 25px;
+  font-size: 22px;
   color: #434343;
 }
 .logo.logo__purple {
   color: #9656DC;
+}
+
+.card {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurants {
+  background-color: #F3F3F3;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+.grande_card {
+  display: flex;
+  height: 220px;
+  width: 85%;
+  margin: 0 7% 5% 7%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px #E3E3E3;
+  background-color: white;
+}
+
+.grande_photo {
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  width: 85%;
+  border-radius: 20px 20px 0px 0px;
+  height: 150px;
+}
+
+.nouveau {
+  position: absolute;
+  z-index: 2;
+  left: 65%;
+  margin: 10px 15px 0 0;
+  background-color: #99E2D0;
+  color: #3C8E5E;
+  padding: 5px 12px 5px 12px;
+  width: fit-content;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.legende {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: auto;
+  line-height: 1.5;
+  width: 85%;
+  padding: 0px 15px 10px 20px;
+}
+
+.coeur {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.coeur .color {
+  display: none;
+}
+
+.coeur:hover .color {
+  display: inline;
+  transition: color 3s;
+}
+
+.coeur:hover .empty {
+  display: none;
+}
+
+.footer_link {
+  background-color: #434343;
+  padding: 20px;
+}
+
+.footer_clic {
+  text-decoration: none;
+  color: white;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 /*# sourceMappingURL=page_accueil-style.css.map */
