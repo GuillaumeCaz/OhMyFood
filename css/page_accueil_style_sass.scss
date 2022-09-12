@@ -200,9 +200,8 @@ p{
 }
 .coeur:hover .color{
     display:inline;
-    transition: color 3s;
-    //background: linear-gradient(344deg, $pink 0%, $purple 100%);
-    //background-clip: border-box;
+    animation: button-heart 2s ease;
+    animation-fill-mode: forwards;
     //-webkit-background-clip: text;
     //-webkit-text-fill-color: transparent;
 } 
