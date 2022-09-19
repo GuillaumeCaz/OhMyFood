@@ -12,6 +12,7 @@ $green:#99E2D0;
 *{
 font-family: $title_font;    
 font-family:$main_font;
+scroll-behavior: smooth;
 }
 
 body{
@@ -20,12 +21,84 @@ body{
 p{
     margin:0;
 }
+a{
+    text-decoration: none;
+}
+.loader{
+    position:absolute;
+    z-index: 3;
+    width:100%;
+    height:100%;
+    background-color: $grey;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    animation:disparaitre 0.1s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+@keyframes disparaitre {
+    0%{
+        opacity:1;
+        z-index:3;
+    }
+    100%{
+        opacity:0;
+        z-index:0;
+    }
+}
+.barre{
+    background-color:$pink;
+    width: 50px;
+    height: 50px;
+    margin:20px; 
+    border-radius: 30px;
+    animation: flash 1.2s linear infinite;
+}
+@keyframes flash{
+    0%{
+        background-color: $purple;
+    }
+    90%{
+        background-color: $pink;
+        box-shadow: none;
+    }
+    100%{
+        background-color: $purple;
+        box-shadow: 0 0 7px $purple;
+        
+    }
+}
+.barre:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.barre:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.barre:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.barre:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.barre:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.fondu-out{
+    opacity:0;
+    position:absolute;
+    z-index:0;
+    transition: all 0.4s ease-out;
+}
 .ohmyfood{
     text-align: center ;
+    position:relative;
+    z-index: 1;
     width:100%;
     font-size: 160%;
     margin:10px 0 10px 0;
-        &__footer{
+    color:black;
+            &__footer{
             color:white;
             font-family: $title_font;
             padding-top:20px;
@@ -33,6 +106,7 @@ p{
 }
 .main_title{
     font-family: $title_font;
+    
 }
 .dégradé{
     background: linear-gradient($strong_grey,10%, $grey);
@@ -76,6 +150,7 @@ p{
 }
 .purple_button{
     background: $purple;
+    z-index: 1;
     background: linear-gradient(344deg, $purple 0%, $pink 100%);
     padding: 15px;
     border-radius: 30px;
@@ -85,10 +160,13 @@ p{
     line-height: 1;
     letter-spacing: 0px;
     box-shadow: 3px 3px 10px 0 $strong_grey;
+    transition:all 1s;
+        &:hover{
+            background: linear-gradient(344deg, $pink 0%, $purple 100%);
+            box-shadow: 5px 5px 10px 0 $strong_grey;
+            scale:1.05;
+        }
 
-}
-.purple_button:hover{
-    background: linear-gradient(344deg, $pink 0%, $purple 100%);
 }
 .fonctionnement{
     display:flex;
@@ -98,7 +176,7 @@ p{
 .titre{
     font-weight: 700;
     font-size: 22px;
-    padding: 40px 0 30px 20px;
+    padding: 40px 0 30px 8%;
 }
 
 .fonct{
@@ -111,10 +189,18 @@ p{
     border-radius: 20px;
     box-shadow: 3px 3px 10px 0 $strong_grey;
     font-weight:bold;
-        &.fonct__purple{
-            background-color: #EBE2F5;
+    transform:scale(1);
+    transition: all 0.5s;
+    &:hover{
+        background-color: #ffd5f3;
+        transform:scale(1.05);
+        & .logo{
+            color:$purple;
         }
+    }
+        
 }
+ 
 .purple_circle{
     display:flex;
     align-items: center;
@@ -134,9 +220,6 @@ p{
     bottom: 5px;
     font-size: 22px;
     color:$very_strong_grey;
-        &.logo__purple{
-            color:$purple;
-        }
 }
 .card{
     text-decoration:none;
@@ -196,21 +279,29 @@ p{
 
 .coeur .color{
     display:none;
-    
+    color:$green;
 }
 .coeur:hover .color{
     display:inline;
-    animation: button-heart 2s ease;
+    animation: button-heart 1s ease;
     animation-fill-mode: forwards;
-    //-webkit-background-clip: text;
-    //-webkit-text-fill-color: transparent;
 } 
+@keyframes button-heart {
+    50%{
+        color:$pink;
+    }
+    100% {
+      color: $purple;
+      text-shadow: -2px 0 $pink, 0 2px $pink, 2px 0 $pink, 0px -2px $pink;
+      
+    }
+  }
 .coeur:hover .empty{
     display:none;
 }
 .footer_link{
     background-color: $very_strong_grey;
-    padding: 20px;
+    padding: 40px;
 }
 .footer_clic{
     text-decoration: none;
@@ -220,4 +311,44 @@ p{
 ul{
     list-style: none;
     padding: 0;
+}
+.fa-utensils{
+    color:white;
+    margin-right: 10px;
+    font-size: 13px;
+    
+}
+.fa-handshake-angle{
+    color:white;
+    margin-right: 5px;
+    font-size: 13px;
+}
+@media screen and (min-width:992px) {
+.titre{
+    padding-left: 60px;
+}
+.all_card{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+.grande_card{
+    width:80%;
+}
+.grande_photo{
+    width:40%;
+}
+.card{
+    min-width:50%;
+}
+
+.nouveau{
+    left:32%;
+}
+.nouveau_droite{
+        left:82%;
+    }
+
+
+
 }

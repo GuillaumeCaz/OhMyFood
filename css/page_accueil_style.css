@@ -1,23 +1,371 @@
+@charset "UTF-8";
 * {
+  font-family: "Shrikhand", cursive;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.loader {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: #E3E3E3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: disparaitre 0.1s;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+
+@keyframes disparaitre {
+  0% {
+    opacity: 1;
+    z-index: 3;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.barre {
+  background-color: #FF79DA;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  border-radius: 30px;
+  animation: flash 1.2s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    background-color: #9656DC;
+  }
+  90% {
+    background-color: #FF79DA;
+    box-shadow: none;
+  }
+  100% {
+    background-color: #9656DC;
+    box-shadow: 0 0 7px #9656DC;
+  }
+}
+.barre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.barre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.barre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.barre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.barre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.fondu-out {
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  transition: all 0.4s ease-out;
+}
+
+.ohmyfood {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  font-size: 160%;
+  margin: 10px 0 10px 0;
+  color: black;
+}
+.ohmyfood__footer {
+  color: white;
+  font-family: "Shrikhand", cursive;
+  padding-top: 20px;
+}
+
+.main_title {
   font-family: "Shrikhand", cursive;
 }
 
-.titre {
-  text-align: center;
+.dégradé {
+  background: linear-gradient(#aaa9a9, 10%, #E3E3E3);
+  height: 5px;
   width: 100%;
-  font-size: 160%;
 }
 
 .location {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: #E3E3E3;
+  color: #434343;
+}
+
+.fa-map-marker-alt {
+  align-content: center;
+  padding: 10px 10px 0 0;
+}
+
+.location_text {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0 15px 0;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  background-color: #F3F3F3;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 250px;
+}
+
+.reservez {
+  width: 75%;
+  font-weight: 1000;
   text-align: center;
+  font-size: 22px;
+}
+
+.decouvrez {
+  text-align: center;
+  width: 80%;
+}
+
+.purple_button {
+  background: #9656DC;
+  z-index: 1;
+  background: linear-gradient(344deg, #9656DC 0%, #FF79DA 100%);
+  padding: 15px;
+  border-radius: 30px;
+  color: #F3F3F3;
+  font-weight: 400;
+  border: none;
+  line-height: 1;
+  letter-spacing: 0px;
+  box-shadow: 3px 3px 10px 0 #aaa9a9;
+  transition: all 1s;
+}
+.purple_button:hover {
+  background: linear-gradient(344deg, #FF79DA 0%, #9656DC 100%);
+  box-shadow: 5px 5px 10px 0 #aaa9a9;
+  scale: 1.05;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
-.text_location {
-  text-align: center;
+.titre {
+  font-weight: 700;
+  font-size: 22px;
+  padding: 40px 0 30px 8%;
+}
+
+.fonct {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  background-color: #F3F3F3;
+  padding: 30px 20px 20px 22px;
+  margin: 0px 2% 5% 10%;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px 0 #aaa9a9;
+  font-weight: bold;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+.fonct:hover {
+  background-color: #ffd5f3;
+  transform: scale(1.05);
+}
+.fonct:hover .logo {
+  color: #9656DC;
+}
+
+.purple_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9656DC;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: relative;
+  bottom: 5px;
+  right: 40px;
+}
+
+.logo {
+  position: relative;
+  right: 20px;
+  bottom: 5px;
+  font-size: 22px;
+  color: #434343;
+}
+
+.card {
+  text-decoration: none;
+  color: black;
+}
+
+.restaurants {
+  background-color: #F3F3F3;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+.grande_card {
+  display: flex;
+  height: 220px;
+  width: 85%;
+  margin: 0 7% 5% 7%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px #E3E3E3;
+  background-color: white;
+}
+
+.grande_photo {
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  width: 85%;
+  border-radius: 20px 20px 0px 0px;
+  height: 150px;
+}
+
+.nouveau {
+  position: absolute;
+  z-index: 2;
+  left: 65%;
+  margin: 10px 15px 0 0;
+  background-color: #99E2D0;
+  color: #3C8E5E;
+  padding: 5px 12px 5px 12px;
+  width: fit-content;
+  font-weight: bold;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.legende {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: auto;
+  line-height: 1.5;
+  width: 85%;
+  padding: 0px 15px 10px 20px;
+}
+
+.coeur {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.coeur .color {
+  display: none;
+  color: #99E2D0;
+}
+
+.coeur:hover .color {
+  display: inline;
+  animation: button-heart 1s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes button-heart {
+  50% {
+    color: #FF79DA;
+  }
+  100% {
+    color: #9656DC;
+    text-shadow: -2px 0 #FF79DA, 0 2px #FF79DA, 2px 0 #FF79DA, 0px -2px #FF79DA;
+  }
+}
+.coeur:hover .empty {
+  display: none;
+}
+
+.footer_link {
+  background-color: #434343;
+  padding: 40px;
+}
+
+.footer_clic {
+  text-decoration: none;
+  color: white;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fa-utensils {
+  color: white;
+  margin-right: 10px;
+  font-size: 13px;
+}
+
+.fa-handshake-angle {
+  color: white;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+@media screen and (min-width: 992px) {
+  .titre {
+    padding-left: 60px;
+  }
+  .all_card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .grande_card {
+    width: 80%;
+  }
+  .grande_photo {
+    width: 40%;
+  }
+  .card {
+    min-width: 50%;
+  }
+  .nouveau {
+    left: 32%;
+  }
+  .nouveau_droite {
+    left: 82%;
+  }
 }
 
 /*# sourceMappingURL=page_accueil_style.css.map */
