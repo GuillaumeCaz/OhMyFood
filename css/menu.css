@@ -168,24 +168,6 @@ a {
   width: 100%;
   cursor: pointer;
   transition: transform 0.5s;
-  /*&:hover + .bloc_prix{
-       transform:translate(-40px,0);
-       transition:transform 0.5s;
-   }
-   &:hover ~ .bloc_logo{
-       transform: scaleX(1);
-       transform-origin: right;
-   }*/
-}
-.plat:hover + .anim {
-  /*&:hover > .bloc_logo{
-      transform: scaleX(1);
-      transform-origin: right;
-  }
-  &:hover > .bloc_prix{
-      transform:translate(-40px,0);
-      transition:transform 0.5s;
-  }*/
 }
 .plat:hover + .anim.anim > .bloc_logo {
   transform: scaleX(1);
@@ -214,15 +196,6 @@ a {
   left: 40px;
   cursor: pointer;
   transition: transform 0.5s;
-  /*&:hover{
-      transform:translate(-40px,0);
-      transition:transform 0.5s;
-  }
-  &:hover + .bloc_logo{
-      transform: scaleX(1);
-      transform-origin: right;
-  }
-  */
 }
 
 .anim:hover:hover > .bloc_logo {
@@ -242,15 +215,6 @@ a {
   transform: scale(0);
   transition: transform 0.5s;
   cursor: pointer;
-  /*&:hover{
-      transform:scale(1);
-      transform-origin: right;
-  }
-  &:hover ~ .bloc_prix{
-      transform:scale(2);
-
-  }
-  */
 }
 
 .anim {
@@ -287,7 +251,6 @@ a {
 
 .purple_button:hover {
   background: linear-gradient(344deg, #FF79DA 0%, #9656DC 100%);
-  scale: 1.05;
 }
 
 .fa-utensils {

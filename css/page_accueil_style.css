@@ -172,7 +172,6 @@ a {
 .purple_button:hover {
   background: linear-gradient(344deg, #FF79DA 0%, #9656DC 100%);
   box-shadow: 5px 5px 10px 0 #aaa9a9;
-  scale: 1.05;
 }
 
 .fonctionnement {
