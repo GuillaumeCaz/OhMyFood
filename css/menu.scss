@@ -1,3 +1,4 @@
+/*variables*/
 $main_font: 'Roboto', sans-serif;
 $title_font:'Shrikhand', cursive;
 $very_strong_grey:#434343;
@@ -93,6 +94,7 @@ $green:#99E2D0;
         animation: button-heart 1s ease;
         animation-fill-mode: forwards;
     } 
+    /*animation coeur*/
     @keyframes button-heart {
         50%{
             color:$pink;
@@ -115,6 +117,7 @@ $green:#99E2D0;
        }
        
     }
+    /*animation apparition des plats successifs*/
     .groupe_plat__premier{
         animation:fadein 1s linear;
         animation-delay: 0s;
@@ -165,6 +168,7 @@ $green:#99E2D0;
         
         box-shadow: 3px 3px 10px 0 $grey;
     }
+    /*Animation icone check au survol du plat*/
     .plat{
         margin:10px;
         margin-right: 20px;
@@ -225,15 +229,6 @@ $green:#99E2D0;
         transform: scale(0);
         transition:transform 0.5s;
         cursor: pointer;
-        /*&:hover{
-            transform:scale(1);
-            transform-origin: right;
-        }
-        &:hover ~ .bloc_prix{
-            transform:scale(2);
-            
-        }
-        */
     }
     .anim {
         display:flex;
@@ -283,26 +278,7 @@ $green:#99E2D0;
         margin-right: 5px;
         font-size: 13px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .footer_link{
+     .footer_link{
         background-color: $very_strong_grey;
         padding: 20px;
     }

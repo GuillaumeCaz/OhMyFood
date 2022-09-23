@@ -1,3 +1,4 @@
+/*variables*/
 $main_font: 'Roboto', sans-serif;
 $title_font:'Shrikhand', cursive;
 $very_strong_grey:#434343;
@@ -37,6 +38,7 @@ a{
     animation-fill-mode: forwards;
     animation-delay: 2s;
 }
+/*animation disparition du loader*/
 @keyframes disparaitre {
     0%{
         opacity:1;
@@ -55,6 +57,7 @@ a{
     border-radius: 30px;
     animation: flash 1.2s linear infinite;
 }
+/*animation remplissages des différents ronds loader*/
 @keyframes flash{
     0%{
         background-color: $purple;
@@ -285,6 +288,7 @@ a{
     animation: button-heart 1s ease;
     animation-fill-mode: forwards;
 } 
+/*animation coeur*/
 @keyframes button-heart {
     50%{
         color:$pink;
@@ -322,6 +326,7 @@ ul{
     margin-right: 5px;
     font-size: 13px;
 }
+/*redimentionnement de la page pour grands ecrans*/
 @media screen and (min-width:992px) {
 .titre{
     padding-left: 60px;

@@ -1,3 +1,4 @@
+/*variables*/
 * {
   font-family: "Shrikhand", cursive;
   font-family: "Roboto", sans-serif;
@@ -89,6 +90,7 @@ a {
   animation-fill-mode: forwards;
 }
 
+/*animation coeur*/
 @keyframes button-heart {
   50% {
     color: #FF79DA;
@@ -111,6 +113,7 @@ a {
   margin-top: 308px;
 }
 
+/*animation apparition des plats successifs*/
 .groupe_plat__premier {
   animation: fadein 1s linear;
   animation-delay: 0s;
@@ -161,6 +164,7 @@ a {
   box-shadow: 3px 3px 10px 0 #E3E3E3;
 }
 
+/*Animation icone check au survol du plat*/
 .plat {
   margin: 10px;
   margin-right: 20px;
@@ -251,6 +255,7 @@ a {
 
 .purple_button:hover {
   background: linear-gradient(344deg, #FF79DA 0%, #9656DC 100%);
+  scale: 1.05;
 }
 
 .fa-utensils {
