@@ -171,17 +171,27 @@ a {
   min-width: 100px;
   width: 100%;
   cursor: pointer;
-  transition: transform 0.5s;
+  transition: all 0.5s;
 }
 .plat:hover + .anim.anim > .bloc_logo {
   transform: scaleX(1);
   transform-origin: right;
 }
+.plat:hover + .anim.anim > .bloc_logo.bloc_logo > .fa-circle-check {
+  animation: rotation 1s;
+}
 .plat:hover + .anim.anim > .bloc_prix {
   transform: translate(-40px, 0);
-  transition: transform 0.5s;
 }
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .nom_plat {
   overflow: hidden;
   white-space: nowrap;
@@ -205,6 +215,9 @@ a {
 .anim:hover:hover > .bloc_logo {
   transform: scaleX(1);
   transform-origin: right;
+}
+.anim:hover:hover > .bloc_logo.bloc_logo > .fa-circle-check {
+  animation: rotation 1s;
 }
 .anim:hover:hover > .bloc_prix {
   transform: translate(-40px, 0);
@@ -255,7 +268,7 @@ a {
 
 .purple_button:hover {
   background: linear-gradient(344deg, #FF79DA 0%, #9656DC 100%);
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 .fa-utensils {

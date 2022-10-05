@@ -128,13 +128,21 @@ a {
 
 .fa-map-marker-alt {
   align-content: center;
-  padding: 10px 10px 0 0;
+  padding: 13px 10px 0 0;
 }
 
-.location_text {
+#location_text {
+  align-content: center;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  font-size: large;
+  z-index: 1;
+  color: #434343;
   margin: 10px 0 15px 0;
+  text-decoration: none;
+  border: none;
+  background-color: #E3E3E3;
+  width: 130px;
 }
 
 .reservation {
@@ -170,7 +178,6 @@ a {
   line-height: 1;
   letter-spacing: 0px;
   box-shadow: 3px 3px 10px 0 #aaa9a9;
-  transition: all 1s;
 }
 .purple_button:hover {
   background: linear-gradient(344deg, #FF79DA 0%, #9656DC 100%);
