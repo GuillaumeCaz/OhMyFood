@@ -294,34 +294,43 @@ a {
   padding: 0px 15px 10px 20px;
 }
 
+.lien_icone {
+  display: none;
+}
+
 .coeur {
-  padding: 15px;
+  margin: 15px;
   font-size: 20px;
 }
 
-.coeur .color {
+.coeur_rose {
   display: none;
-  color: #99E2D0;
+  width: 24px;
+  position: relative;
+  top: 4px;
+  left: 3px;
 }
-
-.coeur:hover .color {
+.coeur_rose:hover {
   display: inline;
   animation: button-heart 1s ease;
   animation-fill-mode: forwards;
 }
 
-/*animation coeur*/
 @keyframes button-heart {
-  50% {
-    color: #FF79DA;
+  0% {
+    opacity: 0;
   }
   100% {
-    color: #9656DC;
-    text-shadow: -2px 0 #FF79DA, 0 2px #FF79DA, 2px 0 #FF79DA, 0px -2px #FF79DA;
+    opacity: 1;
   }
 }
 .coeur:hover .empty {
   display: none;
+}
+.coeur:hover .empty:hover + .coeur_rose {
+  display: inline;
+  animation: button-heart 1s ease;
+  animation-fill-mode: forwards;
 }
 
 .footer_link {

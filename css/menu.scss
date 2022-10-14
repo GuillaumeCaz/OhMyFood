@@ -79,34 +79,47 @@ $green:#99E2D0;
         border-radius: 30px 30px 0 0;
         margin:0;
     }
+    .lien_icone{
+        display:none;
+    }
     .coeur{
         padding-right: 40px;
         font-size: 20px;
         
     }
-    
-    .coeur .color{
+    .coeur_rose{
         display:none;
-        color:$green;
+        width:24px;
+        &:hover{
+            display:inline;
+            animation: button-heart 1s ease;
+            animation-fill-mode: forwards;
+        }
     }
-    .coeur:hover .color{
-        display:inline;
-        animation: button-heart 1s ease;
-        animation-fill-mode: forwards;
-    } 
-    /*animation coeur*/
+
+    
+    
+    
     @keyframes button-heart {
-        50%{
-            color:$pink;
+        0%{
+            
+            opacity:0;
         }
         100% {
-          color: $purple;
-          text-shadow: -2px 0 $pink, 0 2px $pink, 2px 0 $pink, 0px -2px $pink;
+          
+          opacity:1;
           
         }
       }
     .coeur:hover .empty{
         display:none;
+        &:hover + .coeur_rose{
+            display:inline;
+            animation: button-heart 1s ease;
+            animation-fill-mode: forwards;
+            
+        }
+        
     }
     .groupe_plat{
         background-color: $light_grey;
@@ -177,21 +190,24 @@ $green:#99E2D0;
         cursor:pointer;
         transition:all 0.5s;
         &:hover + .anim{
+            margin-left:30px;
                 &.anim > .bloc_logo{
-                transform: scaleX(1);
-                transform-origin: right;
+                    animation: scale-in-hor-right 0.5s forwards;
+                    transform-origin: right;
                     &.bloc_logo > .fa-circle-check{
-                        animation: rotation 1s;
+                    animation: rotation 1s;
                     }
                 }
                 
                 &.anim > .bloc_prix{
                     transform:translate(-40px,0);
+                    
                 }
 
                          
         }
     }
+    
     @keyframes rotation {
         0%{
             transform:rotate(0);
@@ -201,6 +217,22 @@ $green:#99E2D0;
         }
         
     }
+    @keyframes scale-in-hor-right {
+        0% {
+          
+            transform: scaleX(0);
+          
+            transform-origin: 100% 100%;
+            opacity: 1;
+        }
+        100% {
+          
+            transform: scaleX(1);
+          
+            transform-origin: 100% 100%;
+            opacity: 1;
+        }
+      }
     .nom_plat{
         overflow: hidden;
         white-space: nowrap;
@@ -213,19 +245,19 @@ $green:#99E2D0;
     .bloc_prix{
         display:flex;
         align-self: flex-end;
-        padding:30px 20px 10px 10px;
-        position:relative;
-        left:40px;
+        padding:30px 0px 10px 10px;
         cursor: pointer;
         transition:transform 0.5s;
     }
     .anim{
-        &:hover{
+        
+        &:hover {
+            margin-left:30px;
             &:hover > .bloc_logo{
-                transform: scaleX(1);
+                animation: scale-in-hor-right 0.5s forwards;
                 transform-origin: right;
                 &.bloc_logo > .fa-circle-check{
-                    animation: rotation 1s;
+                animation: rotation 1s;
                 }
             }
             &:hover > .bloc_prix{
